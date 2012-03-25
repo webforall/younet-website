@@ -34,7 +34,9 @@
 
 	<div id="header" class="col-full">
 
-		<div id="logo">
+		<div id="logo" class="fl">
+                    
+                  
 
 		<?php if ( $woo_options['woo_texttitle'] != 'true' ) : $logo = $woo_options['woo_logo']; ?>
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'description' ); ?>">
@@ -50,6 +52,38 @@
 			<span class="site-description"><?php bloginfo( 'description' ); ?></span>
 
 		</div><!-- /#logo -->
+                
+                
+<?php if ( $woo_options['woo_about'] == 'true' && ! is_paged() ): ?>
+    <div id="about" class="col-full">
+        
+        <div id="icons" class="fr">
+		<?php if ( $woo_options['woo_social_twitter'] ): ?>
+			<a class="social-link ico-twitter" href="<?php echo $woo_options['woo_social_twitter']; ?>" title="Twitter">Twitter</a>
+		<?php endif; ?>
+    		<?php if ( $woo_options['woo_social_facebook'] ): ?>
+    			<a class="social-link ico-facebook" href="<?php echo $woo_options['woo_social_facebook']; ?>" title="Facebook">Facebook</a>
+    		<?php endif; ?>
+        	<a class="social-link ico-rss" href="<?php if ( $woo_options['woo_feed_url'] ) { echo $woo_options['woo_feed_url']; } else { echo get_bloginfo_rss( 'rss2_url' ); } ?>" title="Subscribe">RSS Feed</a>
+		<?php if ( $woo_options['woo_social_email'] ): ?>
+			<a class="social-link ico-email" href="<?php echo $woo_options['woo_social_email']; ?>" title="Contact Me">Email</a>
+		<?php endif; ?>
+
+        </div><!-- /#icons --> 
+
+    	<div class="bio">
+
+    		<?php if ( $woo_options['woo_header_bio'] != '' ): ?>
+   				<p><?php echo stripslashes( $woo_options['woo_header_bio'] ); ?></p>
+    		<?php endif; ?>
+
+    	</div><!-- /.bio -->
+
+    	<div class="fix"></div>
+
+    </div><!-- /#about -->
+    <?php endif; ?>                  
+                
 
 		<?php if ( $woo_options['woo_ad_top'] == 'true' ) { ?>
         <div id="topad">

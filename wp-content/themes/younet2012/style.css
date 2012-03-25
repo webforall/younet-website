@@ -247,10 +247,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {text-de
 	#top .nav li li li li:hover ul, #top .nav li li li li.sfhover ul  { left:auto; }
 
 /* 2.3 Header */
-#header{padding:33px 0 2em;clear:both;position:relative;}
-#strip { background: url(images/bg-top.png) repeat-x top left; height: 6px; }
+#header{padding:33px 0 0 0;clear:both;position:relative;}
+#strip { background-color: #0f3059; height: 6px; }
 
-#logo  { float:left; }
+#logo {float: left;}
 #logo img  { }
 #logo .site-title, #logo .site-description  { font-family:'Six Caps', arial serif; color: #000; display:none; text-transform: uppercase;  }
 #logo .site-title a { color:#222; font-size:40px; line-height:40px; text-transform:uppercase; font-weight:normal; text-decoration:none; }
@@ -259,8 +259,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {text-de
 
 #topad {float:right;}
 
-#about { padding: 15px 0 35px; margin-bottom: 3px; }
-#about .bio { width: 75%; }
+#about { position: relative; float: left; width: 770px; padding: 45px 0 35px; margin-bottom: 3px; margin-left: 35px; height: 60px;}
+#about .bio { }
 #about .bio p { font:normal 24px Palatino, "Palatino Linotype", serif; color: #222222; line-height: 35px; text-shadow: 4px 2px 0px #e3e3e3; }
 #about a.social-link  { float: left; margin: 0 0 0 10px; display: block; width: 27px; height: 0; overflow: hidden; padding-top: 27px; }
 #about .ico-twitter { background: url(images/ico-twitter.png) no-repeat top left; }
@@ -866,7 +866,7 @@ ol.store li span.price { color: #007b9f; font-size: 12px; }
 #InEvidenzaBlock .shadow, #ProgettiAttiviBlock .shadow  { background: url(images/bg-post.png) no-repeat bottom right; width: 200px; height: 100px; z-index: -1; position: absolute; bottom: -22px; right: -20px; }
 
 #icons {
-    margin-right: 21px;
+    padding-top: 3em;
 }
 #main.home {
     padding-right: 21px;
