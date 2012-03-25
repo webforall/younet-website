@@ -18,7 +18,7 @@ class Younet_recentposts extends WP_Widget {
 		echo $before_widget;
 		echo $before_title; ?>
 		
-        <?php echo $after_title; ?>
+                <?php echo $after_title; ?>
                 <?php if ($title): ?>
                     <h3><?php echo $title ?></h3>
 		<?php else: ?>

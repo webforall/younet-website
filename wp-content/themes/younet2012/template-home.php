@@ -73,32 +73,50 @@ Template Name: Home Page
 			</div>/#breadcrumbs 
 		<?php } ?>  			
 
-        <?php if (have_posts()) : $count = 0; ?>
-        <?php while (have_posts()) : the_post(); $count++; ?>
-                                                                    
-            <div <?php post_class(); ?>>
+                <?php if (have_posts()) : $count = 0; ?>
+                    <?php while (have_posts()) : the_post(); $count++; ?>
 
-			    <h1 class="title"><?php the_title(); ?></h1>
+	<div class="post">
 
-                <div class="entry">
-                	<?php the_content(); ?>
+        <div class="post-content">
+	    <?php if ( ( ( is_single() ) && ( get_option( 'woo_thumb_single' ) == 'true' ) ) || ( is_home() || is_front_page() || is_archive() || is_search() ) ) { ?>
+        <div class="media">
+        	<?php $align_class = get_option( 'woo_thumb_align' ); ?>
+    	    <?php if ( is_single() ) { $width = get_option( 'woo_single_w' ); $height = get_option( 'woo_single_h' ); } else { $width = get_option( 'woo_thumb_w' ); $height = get_option( 'woo_thumb_h' ); }   ?>
+    	    <?php if ( get_option( 'woo_dynamic_img_height' ) != 'true' ) { $height = '&height='.$height; } else { $height = ''; } ?>
+    	    <?php if ( get_option( 'woo_image_link_to' ) == 'image' ) {
+		?><a href="<?php echo get_post_meta( $post_id, "image", true ); ?>" title="<?php echo esc_attr( $meta_data ); ?>" rel="lightbox"><?php woo_image( 'key=image&width='.$width.$height.'&link=img&class='.$align_class ); ?></a><?php
+	} else { ?>
+    	    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( $meta_data ); ?>">
+    	    <?php echo woo_image( 'key=image&width='.$width.$height.'&link=img&class='.$align_class ); ?>
+    	    </a><?php } ?>
+	   	</div><!-- /.media -->
+	   	<?php } ?>
 
-					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
-               	</div> /.entry 
+	    <div class="entry">
+			<?php if ( ( ( get_option( 'woo_home_content' ) == 'false' ) && ( is_home() ) ) || ( ( get_option( 'woo_archive_content' ) == 'false' ) && ( is_archive() || is_search() || is_tax() ) ) ) { the_excerpt(); } elseif ( ( $pagetype == 'archive' ) && ( get_option( 'woo_archive_content' ) == 'false' ) ) { the_excerpt(); } elseif ( ( $pagetype == 'home' ) && ( get_option( 'woo_home_content' ) == 'false' ) ) { the_excerpt(); } else { the_content(); } ?>
+		</div>
+        	<div class="post-meta">
+        				<?php the_tags( '<span class="tags">', ', ', '</span>' ); ?>
+        				<?php if ( $service != 'Off' ) { ?><span class="shorturl"><a href="<?php echo woo_short_url( get_permalink() ); ?>" title="<?php esc_attr_e( 'Short URL for', 'woothemes' ); ?> <?php the_title(); ?>"><?php _e( 'Short URL', 'woothemes' ) ?></a></span><?php } ?>
+        	</div>
 
-				<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="small">', '</span>' ); ?>
-                
-            </div> /.post 
-            
-            <?php $comm = $woo_options[ 'woo_comments' ]; if ( ($comm == "page" || $comm == "both") ) : ?>
-                <?php comments_template(); ?>
-            <?php endif; ?>
-                                                
-		<?php endwhile; else: ?>
-			<div <?php post_class(); ?>>
-            	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ) ?></p>
-            </div> /.post 
-        <?php endif; ?>  
+            <div class="post-shadow"></div>
+
+	    </div>
+	    <div class="post-more">
+	    		<span class="like"><?php if( function_exists( 'getILikeThis' ) ) getILikeThis( 'get' ); ?></span>
+	    		<span class="comments"><?php comments_popup_link( __( '0 Comments', 'woothemes' ), __( '1 Comments', 'woothemes' ), __( '% Comments', 'woothemes' ) ); ?></span>
+	    </div>
+
+	</div><!-- /.post -->
+
+                    <?php endwhile;?>
+                <?php else: ?>
+                    <div <?php post_class(); ?>>
+                        <p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ) ?></p>
+                    </div> 
+                <?php endif; ?>  
         
 		</div><!-- /#main -->
 
