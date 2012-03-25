@@ -1,0 +1,40 @@
+body {
+	background: #e6f2f7;
+}
+
+a, .entry a,
+.iLikeThis .counter,
+.iLikeThis .counter a,
+#comments .comment-head a,
+#comments .comment-head .name a {
+color: #266498;
+}
+
+a:hover,
+.entry a:hover,
+.iLikeThis .counter a:hover,
+#comments .comment-head a:hover,
+#comments .comment-head .name a:hover {
+color: #555;
+}
+
+.nav a {
+border-bottom: 3px solid #e6f2f7;
+}
+
+.nav li ul,
+#comments .comment.thread-even {
+background: #e6f2f7;
+}
+
+.posttype span.icon {
+border-top: 5px solid #e6f2f7;
+}
+
+/* Ecommerce */
+
+ol.store li span.price,
+.shop-post .content p.price {
+color: #266498;
+}
+

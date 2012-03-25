@@ -1,0 +1,85 @@
+*** Briefed Changelog ***
+
+2012.03.15 - version 1.0.18
+ * functions.php - Add a WooTumblog switch to disable the "Tumblog" dashboard widget when WooTumblog is disabled in the theme options.
+
+2012.03.08 - version 1.0.17
+ * style.css - Added .widget_woo_subscribe #connect and .widget_woo_subscribe .title to fix the subscribe/connect widget styling.
+ * includes/theme-actions.php - Added .widget_woo_subscribe #connect and .widget_woo_subscribe .title to fix the subscribe/connect widget styling.
+
+2012.02.27 - version 1.0.16
+ * loop-default.php - Move woo_pagenav() outside of the loop.
+
+2012.02.06 - version 1.0.15
+ * loop-default.php - Add woo_pagenav() call to enable pagination links.
+ * loop-tumblog.php - Add woo_pagenav() call to enable pagination links.
+
+2012.01.03 - version 1.0.14
+ * style.css - Make sure the .dribbbles list is floated, has the full width of the container and is set to display: block. Make sure portfolio item anchors are also display: block (section 2.8).
+ * loop-portfolio.php - Move "fix" DIV tag outside of ordered list to fix invalid HTML hierarchy.
+ * /includes/js/general.js - Make sure jQuery.Masonry runs only after all images have loaded in the selector.
+
+2011.12.22 - version 1.0.13
+ * /includes/js/general.js - Make sure jQuery.Masonry is called correctly for the homepage and "Portfolio" page template's portfolio sections.
+
+2011.11.28 - version 1.0.12
+ * includes/tumblog/theme-tumblog.php - Added featured image output to standard post format posts.
+ 
+2011.11.22 - version 1.0.11
+ * /includes/theme-functions.php - Added Google+ to the subscribe and connect function.
+
+2011.11.17 - version 1.0.10
+ * template-blog.php - Correct pagination when using the "Blog" page template as a static front page. Code clean-up and consistency checks.
+ * loop-default.php - Code consistency checks.
+ * header.php - Code clean-up and consistency checks.
+ * footer.php - Code clean-up and consistency checks.
+ * search-form.php - Code clean-up and consistency checks.
+ * /includes/theme-options.php - Code clean-up and consistency checks.
+ * /includes/theme-js.php - Code clean-up and consistency checks.
+ * includes/tumblog/theme-tumblog.php - Fixed the incompatibility issue with Yoast SEO Plugin.
+
+2011.10.06 - version 1.0.9
+ * index.php, 
+   loop-portfolio.php - Code consistency checks and logic clean-up. Fixed pagination in blog section of index.php.
+ * template-portfolio.php - Code consistency checks and added logic to exclude portfolio items not tagged, using the theme option as a toggle.
+ * /includes/theme-options.php - Added theme option to toggle the logic to display only portfolio items tagged with the specified tags on the "Portfolio" page template.
+ * /includes/js/general.js - Added return false when clicking the sorting tags in the "Portfolio" page template.
+
+2011.09.29 - version 1.0.8
+ * /includes/theme-options.php - Removed author box option
+
+2011.09.29 - version 1.0.7
+ * /includes/featured.php - Don't display the content overlay if both the "slide featured title" and "slide featured content" are disabled.
+
+2011.08.05 - version 1.0.6
+ * includes/theme-options.php, 
+   includes/theme-actions.php - updated slider speed options
+
+2011.06.28 - version 1.0.5
+* /includes/tumblog/wootumblog_postformat.class.php - Added fix for bulk editing of posts
+* /includes/tumblog/theme-custom-post-types.php - Added fix for bulk editing of posts
+
+2011.06.13 - version 1.0.4
+ * style.css - Added slider styling & styled subscribe & connect for single page & widgets
+ * images/ico-audio.png - Added audio icon for tumblog
+ * /includes/featured.php - added slider hidden class
+ * /includes/theme-actions.php - added class removal in JS
+ * /includes/theme-options.php - added subscribe and connect options
+ * loop-default.php - added subscribe and connect area
+ * loop-tumblog.php - added subscribe and connect area
+ * /includes/widgets/widget-woo-embed.php - added conditional for tumblog embed video
+ 
+2011.06.03 - version 1.0.3
+ * style.css - Numerous changes regarding styling of social media icons below header, and some tumblog post types.
+ * header.php - Changed social media icons markup
+ * includes/tumblog/theme-tumblog.php - Made a slight adjustment to the Quote post type
+ * images/ - Changed social media icons (Facebook, Twitter, RSS, Email)
+
+2011.06.03 - version 1.0.2
+ * includes/js/jquery.masonry.min.js - Updated Masonry script to latest version to fix Safari bug.
+
+2011.06.01 - version 1.0.1
+ * includes/featured.php - fixed content in slider to hide when disabled in options
+	
+2011.05.26 - version 1.0
+ * First release!
