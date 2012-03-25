@@ -468,7 +468,7 @@ img.aligncenter  { margin-left:auto; margin-right:auto; display:block; }
 
 /* SEARCH FORM */
 .searchform  { width: 99%; position: relative;}
-.searchform input.s  {  padding: 0px 8px 6px 8px; width:180px; margin:0; border:none; background: none; color:#888; border-bottom: 1px solid #aaaaaa;  }
+.searchform input.s  {  padding: 0px 8px 6px 8px; width:171px; margin:0; border:none; background: none; color:#888; border-bottom: 1px solid #aaaaaa; margin-right: 21px; }
 .searchform input.search-submit { position: absolute; top:6px; left:-18px; border:none; margin:0; padding:0; }
 .searchform input:focus { border-bottom: 0px; }
 
@@ -838,3 +838,38 @@ ol.store li span.price { color: #007b9f; font-size: 12px; }
 .shop-post .add-to-cart { background: url(images/btn-cart.png) no-repeat top left; width: 112px; height: 22px; padding-top: 6px; }
 .shop-post .add-to-cart:hover { background: url(images/btn-cart.png) no-repeat 0 -28px; width: 112px; height: 28px; }
 .shop-post .add-to-cart a span { padding: 0px 0px 0px 30px; }
+
+#SezioneBlocchi {
+/*    border: 1px solid red;*/
+}
+
+#InEvidenzaLabel, #ProgettiAttiviLabel, #InEvidenzaBlock, #ProgettiAttiviBlock{
+    float: left;
+    background-color: white;
+}
+
+#InEvidenzaLabel, #ProgettiAttiviLabel {
+    margin-right: 17px;
+}
+
+#ProgettiAttiviLabel {
+    margin-left: 25px;
+}
+
+#InEvidenzaBlock, #ProgettiAttiviBlock {
+    margin-top: 20px;
+    width: 213px;
+    height: 201px;
+}
+
+#InEvidenzaBlock, #ProgettiAttiviBlock  { background: #fff; position: relative; margin-bottom: 20px; padding: 17px;}
+#InEvidenzaBlock .shadow, #ProgettiAttiviBlock .shadow  { background: url(images/bg-post.png) no-repeat bottom right; width: 200px; height: 100px; z-index: -1; position: absolute; bottom: -22px; right: -20px; }
+
+#icons {
+    margin-right: 21px;
+}
+#main.home {
+    padding-right: 21px;
+    padding-left: 5px;
+    width: 679px;
+}

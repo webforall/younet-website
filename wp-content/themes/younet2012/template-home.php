@@ -44,17 +44,35 @@ Template Name: Home Page
     			get_template_part( 'loop', 'portfolio' );
     		}
     	?>        
-		<div id="main" class="col-left">
-                    
-                    <div id="InEvidenza"><img src="" /></div>
-                    <div id="ProgettiAttivi"></div>
-		           
+		<div id="main" class="col-left home">
+                    <div id="SezioneBlocchi">
+                        <div id="BlocchiEvidenza">
+                            <div id="InEvidenzaLabel">
+                                <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/in_evidenza.png" />
+                            </div>
+                            <div id="InEvidenzaBlock">
+                                <div class="fix"></div>
+                                <p></p>
+                                <div class="fix"></div>
+                                <div class="shadow"></div>
+                            </div>
+                            <div id="ProgettiAttiviLabel">
+                                <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/progetti_attivi.png" /></div>
+                            </div>
+                            <div id="ProgettiAttiviBlock">
+                                <div class="fix"></div>
+                                <p></p>
+                                <div class="fix"></div>
+                                <div class="shadow"></div>
+                            </div>
+                        <br style="clear: both;" />
+                    </div>
 		<?php if ( $woo_options[ 'woo_breadcrumbs_show' ] == 'true' ) { ?>
 			<div id="breadcrumbs">
 				<?php woo_breadcrumbs(); ?>
 			</div>/#breadcrumbs 
 		<?php } ?>  			
-<!--
+
         <?php if (have_posts()) : $count = 0; ?>
         <?php while (have_posts()) : the_post(); $count++; ?>
                                                                     
@@ -80,7 +98,7 @@ Template Name: Home Page
 			<div <?php post_class(); ?>>
             	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ) ?></p>
             </div> /.post 
-        <?php endif; ?>  -->
+        <?php endif; ?>  
         
 		</div><!-- /#main -->
 
