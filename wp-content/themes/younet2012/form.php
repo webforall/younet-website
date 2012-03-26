@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../../../vendor/.composer/autoload.php';
 global $si_contact_form;
 ?>
 
