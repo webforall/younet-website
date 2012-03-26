@@ -30,11 +30,9 @@
 
     <?php } ?>
 
+    <?php get_template_part( 'form' );?>
 	<div id="header" class="col-full">
-
 		<div id="logo" class="fl">
-                    
-                  
 
 		<?php if ( $woo_options['woo_texttitle'] != 'true' ) : $logo = $woo_options['woo_logo']; ?>
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'description' ); ?>">

@@ -878,3 +878,38 @@ ol.store li span.price { color: #007b9f; font-size: 12px; }
     float: none;
     width: 631px;
 }
+
+
+#contact-form{
+  display:none;
+  color: #fff;
+  padding: 25px 100px;
+  width: 730px;
+  background-color: #103457;
+}
+
+#inner-contact-form{
+  width: 365px;
+}
+
+#inner-contact-map{
+  width: 365px;
+}
+#show-contact-form a{
+  color: #fff;
+  background-color: #103457;
+  display: block;
+  float:right;
+  width: 93px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;  
+  background: url('images/arrow-contact-down.gif') #103457 no-repeat 80px 15px ;
+}
+#show-contact-form a:hover {
+  color: #fff;
+}
+#show-contact-form {
+  background: url('images/bg-contact-stripe.gif') transparent repeat-x 0px 0px;
+  padding-top: 7px;
+}
