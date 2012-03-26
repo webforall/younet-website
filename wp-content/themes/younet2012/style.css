@@ -910,6 +910,5 @@ ol.store li span.price { color: #007b9f; font-size: 12px; }
   color: #fff;
 }
 #show-contact-form {
-  background: url('images/bg-contact-stripe.gif') transparent repeat-x 0px 0px;
-  padding-top: 7px;
+/*  background: url('images/bg-contact-stripe.gif') transparent repeat-x 0px 0px;*/
 }
