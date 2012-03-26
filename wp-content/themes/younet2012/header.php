@@ -20,8 +20,6 @@
 
 <div id="wrapper">
 
-	<div id="strip"></div>
-
 	<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
 
 	<div id="top">
