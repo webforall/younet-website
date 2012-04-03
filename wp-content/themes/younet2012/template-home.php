@@ -24,7 +24,11 @@ Template Name: Home Page
                             </div>
                             <div id="InEvidenzaBlock">
                                 <div class="fix"></div>
-                                <p></p>
+                                <p>
+                                  <?php if (is_active_sidebar('sidebar-6')) : ?>
+                                    <?php dynamic_sidebar('sidebar-6'); ?>
+                                  <?php endif; ?>
+                                </p>
                                 <div class="fix"></div>
                                 <div class="shadow"></div>
                             </div>
@@ -33,7 +37,11 @@ Template Name: Home Page
                             </div>
                             <div id="ProgettiAttiviBlock">
                                 <div class="fix"></div>
-                                <p></p>
+                                <p>
+                                  <?php if (is_active_sidebar('sidebar-7')) : ?>
+                                    <?php dynamic_sidebar('sidebar-7'); ?>
+                                  <?php endif; ?>
+                                </p>
                                 <div class="fix"></div>
                                 <div class="shadow"></div>
                             </div>

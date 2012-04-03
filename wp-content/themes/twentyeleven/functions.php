@@ -418,6 +418,25 @@ function twentyeleven_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+    
+	register_sidebar( array(
+		'name' => __( 'In Evidenza', 'twentyeleven' ),
+		'id' => 'sidebar-6',
+		'description' => __( 'Blocco In Evidenza utilizzato in homepage', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Progetti Attivi', 'twentyeleven' ),
+		'id' => 'sidebar-7',
+		'description' => __( 'Blocco Progetti Attivi utilizzato in homepage', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'twentyeleven_widgets_init' );
 
